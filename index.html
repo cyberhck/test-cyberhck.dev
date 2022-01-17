@@ -36,6 +36,7 @@
     </template>
 
     <script src="scripts/components.js"></script>
+    <script src="scripts/accordion.js"></script>
 </head>
 <body>
 <div class="container my-5">
@@ -54,19 +55,22 @@
                 <div class="d-flex align-items-start bg-light p-4">
                     <question-icon></question-icon>
                     <div class="w-100">
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between question">
                             <a href="#" class="text-dark"><h6 class="mb-0">What's this domain?</h6></a>
                             <a href="#" class="text-dark">
                                 <faq-collapse-icon></faq-collapse-icon>
                             </a>
                         </div>
-                        <p class="text-secondary mt-3 d-none" style="line-height: 2;">
-                            I wasn't planning on hosting this stupid page if it weren't for some people being stupid.
-                            This is my domain, I own it, the only purpose is for email filtering. <br/>
-                            I basically give out specific emails for each service, for instance: facebook gets
-                            facebook@cyberhck.dev, github gets github@cyberhck.dev.
-                            If your company name is company-name, you've probably received company-name@cyberhck.dev
-                        </p>
+                        <div class="answer d-none">
+                            <p class="text-secondary mt-3" style="line-height: 2;">
+                                I wasn't planning on hosting this stupid page if it weren't for some people being
+                                stupid.
+                                This is my domain, I own it, the only purpose is for email filtering. <br/>
+                                I basically give out specific emails for each service, for instance: facebook gets
+                                facebook@cyberhck.dev, github gets github@cyberhck.dev.
+                                If your company name is company-name, you've probably received company-name@cyberhck.dev
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,31 +78,38 @@
                 <div class="d-flex align-items-start bg-light p-4">
                     <question-icon></question-icon>
                     <div class="w-100">
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between question">
                             <a href="#" class="text-dark"><h6 class="mb-0">I think I got an invalid email, am I
                                 correct?</h6></a>
                             <a href="#" class="text-dark">
                                 <faq-collapse-icon></faq-collapse-icon>
                             </a>
                         </div>
-                        <p class="text-secondary mt-3 d-none" style="line-height: 2;">
-                            You're most likely wrong. The email I gave you which ends on cyberhck.dev IS valid.<br/>
-                            <br/>
-                            <strong>Explanation:</strong>There are good questions and there are other type of question.
-                            This isn't a good question.<br/>
+                        <div class="answer d-none">
+                            <p class="text-secondary mt-3" style="line-height: 2;">
+                                You're most likely wrong. The email I gave you which ends on cyberhck.dev IS valid.<br/>
+                                <br/>
+                                <strong>Explanation:</strong>There are good questions and there are other type of
+                                question.
+                                This isn't a good question.<br/>
 
-                            If I've given you the email, the way you can verify if the email is invalid is by just
-                            sending the email. If your email sends verification emails, then doesn't that already filter
-                            out non-existing email? Why are you in this stupid website?
-                            If you still think this email is invalid, either you're wrong, or I am. <a
-                                href="./images/img.png" target="_blank">But</a> I <a href="./images/img_1.png">can</a>
-                            definitely <a href="./images/img_2.png">assure</a> you <a href="./images/img_3.png">that</a>
-                            I'm <a href="./images/img_4.png">using</a> these <a href="./images/img_4.png">E-Mails</a>
-                            for <a href="./images/img_5.png">a</a> while <a href="./images/img_6.png">now</a>.
-                            <br/>
-                            You still think email is invalid? Check the screenshots on those links, I've linked to
-                            screenshot of my accounts on various platforms I no longer care about.
-                        </p>
+                                If I've given you the email, the way you can verify if the email is invalid is by just
+                                sending the email. If your email sends verification emails, then doesn't that already
+                                filter
+                                out non-existing email? Why are you in this stupid website?
+                                If you still think this email is invalid, either you're wrong, or I am. <a
+                                    href="./images/img.png" target="_blank">But</a> I <a
+                                    href="./images/img_1.png">can</a>
+                                definitely <a href="./images/img_2.png">assure</a> you <a
+                                    href="./images/img_3.png">that</a>
+                                I'm <a href="./images/img_4.png">using</a> these <a
+                                    href="./images/img_4.png">E-Mails</a>
+                                for <a href="./images/img_5.png">a</a> while <a href="./images/img_6.png">now</a>.
+                                <br/>
+                                You still think email is invalid? Check the screenshots on those links, I've linked to
+                                screenshot of my accounts on various platforms I no longer care about.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,30 +117,37 @@
                 <div class="d-flex align-items-start bg-light p-4">
                     <question-icon></question-icon>
                     <div class="w-100">
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between question">
                             <a href="#" class="text-dark"><h6 class="mb-0">Why are you doing this? Isn't this more
                                 complicated?</h6></a>
                             <a href="#" class="text-dark">
                                 <faq-collapse-icon></faq-collapse-icon>
                             </a>
                         </div>
-                        <p class="text-secondary mt-3" style="line-height: 2;">
-                            Frankly, weather or not this is complicated is none of your business, your system needs an
-                            email so that it can send me information, use it.
-                            <br/>
-                            For the other part of question, I'm doing this because I don't trust your systems. When your
-                            system gets compromised, or you sell my information to 3rd party companies, I'll be able to
-                            notice I'm getting spam emails on the email I gave to you, after which I can do two things:
-                        <ul class="text-secondary">
-                            <li>
-                                delete the mailbox so that email isn't valid anymore and then update the email address
-                                on the system.
-                            </li>
-                            <li>
-                                do something with the knowledge that my email which was provided to you was leaked.
-                            </li>
-                        </ul>
-                        </p>
+                        <div class="answer d-none">
+                            <p class="text-secondary mt-3" style="line-height: 2;">
+                                Frankly, weather or not this is complicated is none of your business, your system needs
+                                an
+                                email so that it can send me information, use it.
+                                <br/>
+                                For the other part of question, I'm doing this because I don't trust your systems. When
+                                your
+                                system gets compromised, or you sell my information to 3rd party companies, I'll be able
+                                to
+                                notice I'm getting spam emails on the email I gave to you, after which I can do two
+                                things:
+                            <ul class="text-secondary">
+                                <li>
+                                    delete the mailbox so that email isn't valid anymore and then update the email
+                                    address
+                                    on the system.
+                                </li>
+                                <li>
+                                    do something with the knowledge that my email which was provided to you was leaked.
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,48 +163,59 @@
                 <div class="d-flex align-items-start bg-light p-4">
                     <question-icon></question-icon>
                     <div class="w-100">
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between question">
                             <a href="#" class="text-dark"><h6 class="mb-0">What's actually this?</h6></a>
                             <a href="#" class="text-dark">
                                 <faq-collapse-icon></faq-collapse-icon>
                             </a>
                         </div>
-                        <p class="text-secondary mt-3 d-none" style="line-height: 2;">
-                            Find your way to <a href="https://haveibeenpwned.com/">haveibeenpawned</a> and see if your
-                            information have ever been compromised.
-                            In my case I've been exposed:
-                        <ul class="text-secondary">
-                            <li>000webhost exposed my emails, IP addresses, my name and my password in PLAIN TEXT!!!
-                                (WTF!)
-                            </li>
-                            <li>I signed up for 500px for some reason and they exposed my email address, name, username,
-                                gender, date of birth, and my password hash
-                            </li>
-                            <li>Time for a big company, fucking adobe exposed my email address, username and encrypted
-                                password (not hashed) AND password hint. Encryption was poor and quickly was broken
-                            </li>
-                            <li>Gravatar exposed my name, username, and md5 hash of my email, not too bad, but come
-                                on!
-                            </li>
-                            <li>LinkedIn exposed my email address as well as unsalted hash of my password! LinkedIn!,
-                                seriously, I'm not even kidding, LinkedIn.
-                            </li>
-                            <li>TRAI (Telecom Regulatory Authority of India) exposed my email address as well as the
-                                body of email which I sent them.
-                            </li>
-                        </ul>
-                        <p class="text-secondary">
-                            After seeing this stupidity from even big companies, I've decided to change the way I think.
-                            Instead of worrying about my email address being exposed, I'm assuming that it'll get leaked
-                            at some point. There's nothing I can do about it. <br/><br/>
-                            What I can do however is give every system separate mailbox, every single mailbox forwards
-                            incoming emails into my personal inbox. And WHEN a system is compromised,
-                            I simply delete that mailbox (if I find out that way), however even if a company tries to
-                            hide it, the minute I get an email not from them, but from someone else (weather the company
-                            made a mistake, or they willingly sold the data to someone else), I immediately know I'm
-                            exposed, all I have to do is simply delete the mailbox.
-                        </p>
-                        </p>
+                        <div class="answer d-none">
+                            <p class="text-secondary mt-3" style="line-height: 2;">
+                                Find your way to <a href="https://haveibeenpwned.com/">haveibeenpawned</a> and see if
+                                your
+                                information have ever been compromised.
+                                In my case I've been exposed:
+                            <ul class="text-secondary">
+                                <li>000webhost exposed my emails, IP addresses, my name and my password in PLAIN TEXT!!!
+                                    (WTF!)
+                                </li>
+                                <li>I signed up for 500px for some reason and they exposed my email address, name,
+                                    username,
+                                    gender, date of birth, and my password hash
+                                </li>
+                                <li>Time for a big company, fucking adobe exposed my email address, username and
+                                    encrypted
+                                    password (not hashed) AND password hint. Encryption was poor and quickly was broken
+                                </li>
+                                <li>Gravatar exposed my name, username, and md5 hash of my email, not too bad, but come
+                                    on!
+                                </li>
+                                <li>LinkedIn exposed my email address as well as unsalted hash of my password!
+                                    LinkedIn!,
+                                    seriously, I'm not even kidding, LinkedIn.
+                                </li>
+                                <li>TRAI (Telecom Regulatory Authority of India) exposed my email address as well as the
+                                    body of email which I sent them.
+                                </li>
+                            </ul>
+                            <p class="text-secondary">
+                                After seeing this stupidity from even big companies, I've decided to change the way I
+                                think.
+                                Instead of worrying about my email address being exposed, I'm assuming that it'll get
+                                leaked
+                                at some point. There's nothing I can do about it. <br/><br/>
+                                What I can do however is give every system separate mailbox, every single mailbox
+                                forwards
+                                incoming emails into my personal inbox. And WHEN a system is compromised,
+                                I simply delete that mailbox (if I find out that way), however even if a company tries
+                                to
+                                hide it, the minute I get an email not from them, but from someone else (weather the
+                                company
+                                made a mistake, or they willingly sold the data to someone else), I immediately know I'm
+                                exposed, all I have to do is simply delete the mailbox.
+                            </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,38 +223,54 @@
                 <div class="d-flex align-items-start bg-light p-4">
                     <question-icon></question-icon>
                     <div class="w-100">
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center justify-content-between question">
                             <a href="#" class="text-dark"><h6 class="mb-0">I like this how can I do the same?</h6></a>
                             <a href="#" class="text-dark">
                                 <faq-collapse-icon></faq-collapse-icon>
                             </a>
                         </div>
-                        <p class="text-secondary mt-3 d-none" style="line-height: 2;">
-                            You have multiple ways of doing this, all of them with varying degree of complexity. In any
-                            of those, you'll need a domain name. I purchase mine from google domains, I'm sure you can
-                            do it from somewhere else.
-                            <br/>
-                            Once you have your domain, you have the following options
-                        <ul class="text-secondary">
-                            <li>
-                                simply set up your domain to forward all your incoming mails to your primary email address.
-                                <br>
-                                The downside of this is anyone can send you email targeting any email address, like asdflajsdlfjaf@yourdomain.com would still land in your primary email address, you can get by with this method as long as there's no one targeting you.
-                                <br>
-                                The upside however is very easy
-                            </li>
-                            <li>
-                                create individual email address and have them forward to your primary address
-                                <br>
-                                While this takes some time for individual addresses, it protects you from the first scenario.
-                            </li>
-                            <li>
-                                Create a filter in your primary email account where incoming email sent to a email which isn't in "known-emails" is marked as spam
-                                create individual email using terraform and have some random suffix at the end, that way no one can really guess email either.
-                                OR you can even think it yourself and sign up first, and later go to your primary email and add it to known-emails list on your filter, and it'll stop sending that email to spam.
-                            </li>
-                        </ul>
-                        </p>
+                        <div class="answer d-none">
+                            <p class="text-secondary mt-3" style="line-height: 2;">
+                                You have multiple ways of doing this, all of them with varying degree of complexity. In
+                                any
+                                of those, you'll need a domain name. I purchase mine from google domains, I'm sure you
+                                can
+                                do it from somewhere else.
+                                <br/>
+                                Once you have your domain, you have the following options
+                            <ul class="text-secondary">
+                                <li>
+                                    simply set up your domain to forward all your incoming mails to your primary email
+                                    address.
+                                    <br>
+                                    The downside of this is anyone can send you email targeting any email address, like
+                                    asdflajsdlfjaf@yourdomain.com would still land in your primary email address, you
+                                    can
+                                    get by with this method as long as there's no one targeting you.
+                                    <br>
+                                    The upside however is very easy
+                                </li>
+                                <li>
+                                    create individual email address and have them forward to your primary address
+                                    <br>
+                                    While this takes some time for individual addresses, it protects you from the first
+                                    scenario.
+                                </li>
+                                <li>
+                                    Create a filter in your primary email account where incoming email sent to a email
+                                    which
+                                    isn't in "known-emails" is marked as spam
+                                    create individual email using terraform and have some random suffix at the end, that
+                                    way
+                                    no one can really guess email either.
+                                    OR you can even think it yourself and sign up first, and later go to your primary
+                                    email
+                                    and add it to known-emails list on your filter, and it'll stop sending that email to
+                                    spam.
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
